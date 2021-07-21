@@ -1,6 +1,7 @@
 import board
 import digitalio
 import busio
+import time
 
 relay = digitalio.DigitalInOut(board.D0)
 relay.direction = digitalio.Direction.OUTPUT
@@ -27,23 +28,37 @@ hexMap = {
   'F' : '1111'
 }
 
-def toBin(hex):
+def toBin(s):
   # input arg. 'hex' is ASCII-encoded hexadecimal string 
   binStr = ""
-  for elem in hex:
-    tmp = hexMap[elem]
-    binStr += tmp
+  for elem in s:
+    if not ((elem < '0' or elem > '9') and (elem < 'A' or elem > 'F')):
+      try:
+        print(elem)
+        tmp = hexMap[elem]
+        binStr += tmp
+      except KeyError:
+        print("KeyError flag")
+        continue
   return binStr
 
 
 def isValid(hex):
-  hex = toBin(hex)
-  if int(a[28:47], 2) in arr:
-    print("success! access granted :)")
-    relay.value = True # pull high
-    time.sleep(0.1) # value is arbitrary
-    relay.value = False
-
+  tmp = toBin(hex)
+  try:
+    if int(tmp[28:47], 2) in arr:
+      print("success! access granted :)")
+      relay.value = True # pull high
+      time.sleep(0.1) # value is arbitrary
+      relay.value = False
+    else:
+      print("error???")
+      relay.value = True # pull high
+      time.sleep(0.1) # value is arbitrary
+      relay.value = False
+      print('nein')
+  except:
+    print(tmp)
 while True:
   data = uart.read(14) # transponder will read 14 bytes ONLY, read HID ProxPro5352A documentation as to why...
   if data is not None:
