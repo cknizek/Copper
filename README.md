@@ -28,4 +28,14 @@ pseudocode
 
 
 
-[1] You can use either RS232, RS422, or RS485, depending on your model. Wire SIG+ and SIG- (GND) to the respective RX/TX pins on your MCU. 
+[1] You can use either RS232, RS422, or RS485, depending on your model. Wire SIG+ and SIG- (GND) to the respective RX/TX pins on your MCU.
+
+
+# Maintenance Notes
+---------------------------
+General
+-- This program was written using CircuitPython, Adafruit's version of MicroPython. This was an explicit design decision
+
+
+Storage
+--> Please, please do not use a microSD card to store any critical data. 
