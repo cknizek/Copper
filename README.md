@@ -34,7 +34,7 @@ pseudocode
 # Maintenance Notes
 ---------------------------
 General
--- This program was written using CircuitPython, Adafruit's version of MicroPython. This was an explicit design decision
+-- This program was written using CircuitPython, Adafruit's version of MicroPython. 
 
 
 Storage
