@@ -1,8 +1,4 @@
-# door
-tmp
-Heyo there! Basic rundown of the code structure...
-There will be two versions of the source code: one in CircuitPython, and one using the Arduino IDE. 
-
+# door 
 code.py --> CircuitPython version, explicitly designed for rapid testing, prototyping, and readability. 
 
 The Cal1 125kHZ cards use a unique method of encoding that took a lot of time to reverse engineer. I spent many hours trying to figure it out, on and off over several months. Eventually I decided to give up. In the interest of knowledge transfer, I began typing up a document detailing everything I learned. This is not that document. This is an attempt to explain in a considerably more precise and readable way.
@@ -28,7 +24,7 @@ pseudocode
 
 
 
-[1] You can use either RS232, RS422, or RS485, depending on your model. Wire SIG+ and SIG- (GND) to the respective RX/TX pins on your MCU.
+[1] You can use either RS232, RS422, or RS485, depending on your model. Wire D+ and D- to the respective RX/TX pins on your MCU.
 
 
 # Maintenance Notes
