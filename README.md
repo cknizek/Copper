@@ -24,7 +24,7 @@ pseudocode
 
 
 
-[1] You can use either RS232, RS422, or RS485, depending on your model. Wire D+ and D- to the respective RX/TX pins on your MCU.
+[1] Wire D+ and D- to the respective RX/TX pins on your MCU.
 
 
 # Maintenance Notes
