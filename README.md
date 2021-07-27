@@ -32,6 +32,8 @@ pseudocode
 General
 -- This program was written using CircuitPython, Adafruit's version of MicroPython. 
 
+-- The HID ProxPro5352A reader can take in between 12-28VDC (max). I highly recommend using a 24VDC *linear* power supply. 
+
 
 Storage
 --> Please, please do not use a microSD card to store any critical data. 
