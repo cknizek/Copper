@@ -1,7 +1,7 @@
 # door 
 code.py --> CircuitPython version, explicitly designed for rapid testing, prototyping, and readability. 
 
-The Cal1 125kHZ cards use a unique method of encoding that took a lot of time to reverse engineer. I spent many hours trying to figure it out, on and off over several months. Eventually I decided to give up. In the interest of knowledge transfer, I began typing up a document detailing everything I learned. This is not that document. This is an attempt to explain in a considerably more precise and readable way.
+The Cal1 125kHZ cards use a unique method of encoding that took a lot of time to reverse engineer. I spent many hours trying to figure it out, on and off over several months. 
 
 Here is the 'decoding' scheme I discovered.
 When the HID ProxPro 5352A reads a Cal1 card (using HID's proprietary formatting and other goodies), it will transmit an ASCII-encoded, hexadecimal string over serial [1].
@@ -24,7 +24,7 @@ pseudocode
 
 
 
-[1] Wire D+ and D- to the respective RX/TX pins on your MCU.
+[1] Wire D+ and D- to the respective RX/TX pins on your MCU. 
 
 
 # Maintenance Notes
