@@ -7,7 +7,7 @@ relay = digitalio.DigitalInOut(board.D0)
 relay.direction = digitalio.Direction.OUTPUT
 uart = busio.UART(board.TX, board.RX, baudrate=9600)
 
-arr = [488722]
+arr = [488722, 486112]
 
 # hexMap is a dict/map, keys are hex values, values are binary equivalent
 hexMap = {
@@ -42,6 +42,11 @@ def toBin(s):
   -------
   str
      The binary representation of s.
+     
+  Examples
+  --------
+  >>> toBin('000C654EEA25CE')
+  '00000000000011000110010101001110111010100010010111001110'
   """
   binStr = ""
   for elem in s:
