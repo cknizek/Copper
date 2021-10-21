@@ -41,5 +41,6 @@ Storage
 
 # Links
 -------
-[1] HID 5352A Manual : https://www.hidglobal.com/system/files/doc_eol_expired_files/proxpro_serial_ins_en.pdf
+[1] HID 5352A Manual : https://www.hidglobal.com/system/files/doc_eol_expired_files/proxpro_serial_ins_en.pdf  
+
 [2] Internet archive version of the link above : https://web.archive.org/web/20210725190958/https://www.hidglobal.com/system/files/doc_eol_expired_files/proxpro_serial_ins_en.pdf
