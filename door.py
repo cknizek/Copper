@@ -79,11 +79,6 @@ def isValid(hex):
       time.sleep(0.1) # value is arbitrary
       relay.value = False # switch OFF
       uart.reset_input_buffer()
-    #else:
-     # print("error???")
-     # relay.value = True # switch ON
-    #  time.sleep(0.1) # value is arbitrary
-     # relay.value = False # switch OFF
   except:
     print(tmp)
 while True:
