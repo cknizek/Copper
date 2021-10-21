@@ -91,3 +91,5 @@ while True:
     data_string = ''.join([chr(b) for b in data])
     isValid(data_string)
     print(data_string, end="")
+
+    
