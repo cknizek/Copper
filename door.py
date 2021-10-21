@@ -59,7 +59,7 @@ def isValid(hex):
   """ 
   Check if an ID is valid.
   
-  This function takes in ''hex''. 
+  This function takes in ''hex'' over UART from the HID 5352A reader. 
   
   Parameters
   ----------
