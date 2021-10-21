@@ -8,6 +8,7 @@ relay.direction = digitalio.Direction.OUTPUT
 uart = busio.UART(board.TX, board.RX, baudrate=9600)
 
 arr = [488722]
+
 # hexMap is a dict/map, keys are hex values, values are binary equivalent
 hexMap = {
   '0' : '0000',
@@ -29,12 +30,23 @@ hexMap = {
 }
 
 def toBin(s):
-  # input arg. 'hex' is ASCII-encoded hexadecimal string 
+  """ 
+  Convert an ASCII-encoded hexadecimal string to it's equivalent binary form.
+  
+  Parameters
+  ----------
+  s : str
+     An ASCII-encoded hexadecimal string.
+  
+  Returns
+  -------
+  str
+     The binary representation of s.
+  """
   binStr = ""
   for elem in s:
     if not ((elem < '0' or elem > '9') and (elem < 'A' or elem > 'F')):
       try:
-        print(elem)
         tmp = hexMap[elem]
         binStr += tmp
       except KeyError:
@@ -44,19 +56,33 @@ def toBin(s):
 
 
 def isValid(hex):
+  """ 
+  Check if an ID is valid.
+  
+  This function takes in ''hex''. 
+  
+  Parameters
+  ----------
+  hex : str
+     an ASCII-encoded, hexadecimal string
+     
+  Returns
+  -------
+  None
+     Switches relay.value
+  """
   tmp = toBin(hex)
   try:
     if int(tmp[28:47], 2) in arr:
       print("success! access granted :)")
-      relay.value = True # pull high
+      relay.value = True # switch ON
       time.sleep(0.1) # value is arbitrary
-      relay.value = False
+      relay.value = False # switch OFF
     else:
       print("error???")
-      relay.value = True # pull high
+      relay.value = True # switch ON
       time.sleep(0.1) # value is arbitrary
-      relay.value = False
-      print('nein')
+      relay.value = False # switch OFF
   except:
     print(tmp)
 while True:
