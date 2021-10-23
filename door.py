@@ -2,10 +2,16 @@ import board
 import digitalio
 import busio
 import time
+import storage
 
 relay = digitalio.DigitalInOut(board.D0)
+switch = digitalio.DigitalInOut(board.D1)
 relay.direction = digitalio.Direction.OUTPUT
+switch.direction = digitalio.direction.INPUT
+switch.pull = digitalio.Pull.UP
+storage.remount("/", switch.value)
 uart = busio.UART(board.TX, board.RX, baudrate=9600)
+
 
 arr = [488722, 486112]
 
