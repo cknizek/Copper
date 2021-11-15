@@ -13,11 +13,11 @@ The above string gives little information, however. To pull out the 6-digit, uni
 And so, the above string now becomes: 00000000000011000110010101001110111010100010010111001110. The might not seem like much. Converting '488722' to binary becomes 1110111010100010010, which can in fact be found as a subset of the string at positions [28:47]. This relationship has held up between several Cal1 cards that have been tested, and so it's unlikely to be a fluke. 
 
 ### TODO
-i. Decide whether interpreted or compiled (i.e. CircuitPython vs Rust)
-ii. Add read/write to SPI flash (annoying w/ CircuitPython)
-iiia. Add Bluetooth UART module
-iiib. Implement LoRa to update (iv)
-iv. CRUD database for user management
+1. Decide whether interpreted or compiled (i.e. CircuitPython vs Rust)
+2. Add read/write to SPI flash (annoying w/ CircuitPython)
+3. Add Bluetooth UART module
+4. Implement LoRa to update (iv)
+5. CRUD database for user management
 
 
 pseudocode
