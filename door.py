@@ -13,7 +13,7 @@ storage.remount("/", switch.value)
 uart = busio.UART(board.TX, board.RX, baudrate=9600)
 
 
-arr = [488722, 486112]
+arr = ["REDACTED"]
 
 # hexMap is a dict/map, keys are hex values, values are binary equivalent
 hexMap = {
