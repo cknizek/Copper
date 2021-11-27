@@ -1,4 +1,4 @@
-# Beepo: a hacked together, highly maintainable RFID access control system.
+# Beepo: a highly maintainable RFID access control system.
 
 You know those nifty Cal1 cards? Well, I spent awhile reverse engineering them. Here's the 'decoding' scheme I discovered.
 
