@@ -1,5 +1,5 @@
-# Beepo: a highly maintainable RFID access control system.
-3
+# Cypreus: a highly maintainable RFID access control system.
+
 You know those nifty Cal1 cards? Well, I spent awhile reverse engineering them. Here's the 'decoding' scheme I discovered. When the HID ProxPro 5352A reads a Cal1 card (using HID's proprietary formatting and other goodies), it will transmit an ASCII-encoded, hexadecimal string over serial [1]. This is what it looks like for my card: `000C654EEA25CE`. ![img1](/photos/hex-output.jpg)
 
 
