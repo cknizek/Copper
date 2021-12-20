@@ -8,6 +8,7 @@ The above string gives little information, however. To pull out the 6-digit, uni
 
 And so, the above string now becomes: *00000000000011000110010101001110111010100010010111001110*. The might not seem like much. Converting '488722' to binary becomes *1110111010100010010*, which can in fact be found as a subset of the string at positions *[28:47]*. This relationship has held up between several Cal1 cards that have been tested, although I'd be interested to see if it still holds up for the new cards introduced this year.
 
+## Click the image to see the video!
 [![Watch the video](https://img.youtube.com/vi/ZLiSRAXvVas/maxresdefault.jpg)](https://youtu.be/dttw-bmGwjo)
 
 
