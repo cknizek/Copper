@@ -7,13 +7,12 @@ import storage
 relay = digitalio.DigitalInOut(board.D0)
 switch = digitalio.DigitalInOut(board.D1)
 relay.direction = digitalio.Direction.OUTPUT
-switch.direction = digitalio.direction.INPUT
+switch.direction = digitalio.Direction.INPUT
 switch.pull = digitalio.Pull.UP
-storage.remount("/", switch.value)
 uart = busio.UART(board.TX, board.RX, baudrate=9600)
 
 
-arr = ["REDACTED"]
+arr = [565828]
 
 # hexMap is a dict/map, keys are hex values, values are binary equivalent
 hexMap = {
@@ -90,6 +89,8 @@ def isValid(hex):
       time.sleep(0.1) # value is arbitrary
       relay.value = False # switch OFF
       uart.reset_input_buffer()
+    else:
+      print("Not found in arr... please try again.")
   except:
     print(tmp)
 while True:
